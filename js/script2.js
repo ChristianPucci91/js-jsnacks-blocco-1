@@ -18,10 +18,12 @@ var arrayObj = [
   {name: 'Jenny', type: 'borsa', color: 'pink'},
 ];
 
-console.log(arrayObj);
+for (var key in arrayObj) { // stampo l'array originale senza nuova proprietà
+  console.log(arrayObj[key]);
+}
 
 // Array copia
-var arrayObj = [
+var arrayObjCopia = [
   {name: 'Poppy', type: 'tshirt', color: 'red'},
   {name: 'Jumping', type: 'occhiali', color: 'blue'},
   {name: 'CrissCross', type: 'scarpe', color: 'black'},
@@ -33,10 +35,10 @@ var alphabet = "abcdefghijklmnopqrstuvwxyz";
 
 // ciclo for dove dico in ogni oggetto dell'array creami una proprietà position che sarà uguale a una lettera casuale
 // data dal valore della variabile "min"
-for (var variable in arrayObj) {
+for (var variable in arrayObjCopia) {
   min = alphabet[Math.floor(Math.random()*alphabet.length)];
-  arrayObj[variable].position = min;
-  console.log(arrayObj[variable]);
+  arrayObjCopia[variable].position = min;
+  console.log("array copia ",arrayObjCopia[variable]);
 }
 
 //----------------------- FINE JSNACK 2 ---------------------
