@@ -22,6 +22,9 @@ while ((isNaN(numeroDue)) || (numeroDue < 0) || (numeroDue > (myArray.length - 1
   numeroDue = parseInt(prompt("Per favore,inserisci un numero tra 0 e " + (myArray.length - 1)));
 }
 
+document.getElementById('numero_uno').innerHTML = "il primo numero scelto è: " + numeroUno;
+document.getElementById('numero_due').innerHTML = "il secondo numero scelto è: " + numeroDue;
+
 if (numeroDue < numeroUno) { // caso limite n.2
   // ciclo for dove pusho gli elementi dell'array scelti dall'utente nel caso l'utente inserisca il secondo numero minore del primo
   for (var i = numeroDue; i <= numeroUno; i++) {
@@ -33,10 +36,7 @@ if (numeroDue < numeroUno) { // caso limite n.2
   } // fine ciclo for
 }// fine condizione if
 
-console.log("numero 1: ",numeroUno);
-console.log("numero 2: ",numeroDue);
 
-
-console.log("il nuovo array sarà: ",arrayUtente);
+document.getElementById('array').innerHTML = "l'array uscito è: " + arrayUtente;
 
 //----------------------- FINE JSNACK 1 ---------------------
